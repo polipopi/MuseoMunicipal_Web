@@ -2572,7 +2572,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		position: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 
@@ -2598,10 +2598,21 @@ input, select, textarea {
 				overflow: hidden;
 			}
 
-				.tiles article > .image img {
-					display: block;
-					width: 100%;
-				}
+				.tiles article > .image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.tiles article > .image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
 				.tiles article > .image:before {
 					pointer-events: none;
