@@ -1,12 +1,348 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Galeria</title>
 
-	</head>
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Galería | Museo Municipal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css">
+    </noscript>
+
+    <style>
+        .galeria-intro {
+            margin-bottom: 3em;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 190px;
+            gap: 15px;
+        }
+
+        .foto {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #252525;
+        }
+
+        .foto:nth-child(1),
+        .foto:nth-child(6) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .foto:nth-child(4) {
+            grid-column: span 2;
+        }
+
+        .foto img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.4s, opacity 0.4s;
+        }
+
+        .foto:hover img {
+            transform: scale(1.08);
+            opacity: 0.75;
+        }
+
+        .foto::after {
+            content: "⌕";
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3em;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .foto:hover::after {
+            opacity: 1;
+        }
+
+        /* Visor de imágenes */
+        .visor {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .visor.activo {
+            display: flex;
+        }
+
+        .visor img {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .cerrar {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .visor-anterior,
+        .visor-siguiente {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .visor-anterior {
+            left: 20px;
+        }
+
+        .visor-siguiente {
+            right: 20px;
+        }
+
+        @media screen and (max-width: 900px) {
+            .galeria {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 180px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .galeria {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 240px;
+            }
+
+            .foto:nth-child(n) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .visor-anterior {
+                left: 5px;
+            }
+
+            .visor-siguiente {
+                right: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <!-- Encabezado -->
+    <header id="header">
+        <div class="inner">
+            <a href="index.html" class="logo">
+                <span class="symbol">
+                    <img src="images/logog.svg" alt="Logo del museo">
+                </span>
+                <span class="title">Museo Municipal</span>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menú</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menú desplegable -->
+    <nav id="menu">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Actividades.html">Actividades</a></li>
+            <li><a href="Galeria.html">Galería</a></li>
+            <li><a href="Historia.html">Historia</a></li>
+            <li><a href="obras.html">Obras culturales</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido -->
+    <div id="main">
+        <div class="inner">
+
+            <header class="galeria-intro">
+                <h1>Nuestra galería</h1>
+                <p>
+                    Un recorrido visual por el arte, la historia y la cultura
+                    que forman parte de la identidad de Guayaquil.
+                    Haz clic en cualquier fotografía para verla en grande.
+                </p>
+            </header>
+
+            <!-- Galería fotográfica -->
+            <div class="galeria" id="galeria">
+
+				<div class="foto video-principal">
+					<video controls poster="images/obras.jpeg">
+						<source src="images/video.mp4" type="video/mp4">
+						Tu navegador no puede reproducir este video.
+					</video>
+				</div>
+
+                <div class="foto">
+                    <img src="images/1.jpeg"
+                         alt="Colección arqueológica">
+                </div>
+
+                <div class="foto">
+                    <img src="images/2.jpeg"
+                         alt="Obras de arte">
+                </div>
+
+                <div class="foto">
+                    <img src="images/3.jpeg"
+                         alt="Historia de Guayaquil">
+                </div>
+
+                <div class="foto">
+                    <img src="images/4.jpeg"
+                         alt="Arte sacro">
+                </div>
+
+                <div class="foto">
+                    <img src="images/5.jpeg"
+                         alt="Exposiciones del museo">
+                </div>
+
+                <div class="foto">
+                    <img src="images/talleres.jpeg"
+                         alt="Presentación cultural">
+                </div>
+
+                <div class="foto">
+                    <img src="images/6.jpeg"
+                         alt="Taller cultural">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Visor de fotografías -->
+    <div class="visor" id="visor" role="dialog"
+         aria-modal="true" aria-label="Fotografía ampliada">
+
+        <button class="cerrar" id="cerrar"
+                aria-label="Cerrar">&times;</button>
+
+        <button class="visor-anterior" id="anterior"
+                aria-label="Fotografía anterior">&#8249;</button>
+
+        <img id="imagen-ampliada" src="" alt="">
+
+        <button class="visor-siguiente" id="siguiente"
+                aria-label="Fotografía siguiente">&#8250;</button>
+    </div>
+
+    <!-- Pie de página -->
+    <footer id="footer">
+        <div class="inner">
+            <p>Museo Municipal de Guayaquil | Proyecto académico</p>
+        </div>
+    </footer>
+
+</div>
+
+<!-- Scripts de Phantom -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- Funcionamiento de la galería -->
+<script>
+    const fotos = document.querySelectorAll(".foto img");
+    const visor = document.getElementById("visor");
+    const imagenAmpliada = document.getElementById("imagen-ampliada");
+    let indiceActual = 0;
+
+    function mostrarImagen(indice) {
+        indiceActual = (indice + fotos.length) % fotos.length;
+        imagenAmpliada.src = fotos[indiceActual].src;
+        imagenAmpliada.alt = fotos[indiceActual].alt;
+    }
+
+    fotos.forEach((foto, indice) => {
+        foto.parentElement.addEventListener("click", () => {
+            mostrarImagen(indice);
+            visor.classList.add("activo");
+        });
+    });
+
+    document.getElementById("cerrar").addEventListener("click", () => {
+        visor.classList.remove("activo");
+    });
+
+    document.getElementById("anterior").addEventListener("click", () => {
+        mostrarImagen(indiceActual - 1);
+    });
+
+    document.getElementById("siguiente").addEventListener("click", () => {
+        mostrarImagen(indiceActual + 1);
+    });
+
+    visor.addEventListener("click", (evento) => {
+        if (evento.target === visor) {
+            visor.classList.remove("activo");
+        }
+    });
+
+    document.addEventListener("keydown", (evento) => {
+        if (!visor.classList.contains("activo")) return;
+
+        if (evento.key === "Escape") {
+            visor.classList.remove("activo");
+        }
+
+        if (evento.key === "ArrowRight") {
+            mostrarImagen(indiceActual + 1);
+        }
+
+        if (evento.key === "ArrowLeft") {
+            mostrarImagen(indiceActual - 1);
+        }
+    });
+</script>
+
+</body>
 </html>

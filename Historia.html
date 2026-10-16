@@ -1,12 +1,147 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Historia</title>
 
-	</head>
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Historia | Museo Municipal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css">
+    </noscript>
+
+    <style>
+        .historia-texto {
+            font-size: 1.05em;
+            line-height: 1.9;
+            text-align: justify;
+            margin-bottom: 2.5em;
+        }
+
+        .historia-imagenes {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 2em;
+        }
+
+        .historia-imagenes img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .historia-imagenes img:hover {
+            transform: scale(1.02);
+        }
+
+        @media screen and (max-width: 736px) {
+            .historia-imagenes {
+                grid-template-columns: 1fr;
+            }
+
+            .historia-imagenes img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <!-- Encabezado -->
+    <header id="header">
+        <div class="inner">
+            <a href="index.html" class="logo">
+                <span class="symbol">
+                    <img src="images/logog.svg" alt="Logo del museo">
+                </span>
+                <span class="title">Museo Municipal</span>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menú</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menú desplegable -->
+    <nav id="menu">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Actividades.html">Actividades</a></li>
+            <li><a href="Galeria.html">Galería</a></li>
+            <li><a href="Historia.html">Historia</a></li>
+            <li><a href="obras.html">Obras culturales</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido de historia -->
+    <div id="main">
+        <div class="inner">
+
+            <h1>Historia del Museo Municipal de Guayaquil</h1>
+
+            <div class="historia-texto">
+                El Museo Municipal de Guayaquil es una institución cultural
+                dedicada a conservar y compartir la historia y el patrimonio
+                de la ciudad. Sus antecedentes se remontan a 1863, cuando se
+                impulsó la creación de un museo y una biblioteca municipal
+                para reunir objetos de interés histórico y promover el
+                conocimiento. Con el paso de los años, sus colecciones
+                crecieron e incorporaron piezas arqueológicas, documentos,
+                obras de arte y objetos relacionados con las distintas etapas
+                de la vida guayaquileña. En 1908, el museo funcionó en el
+                edificio del antiguo Cabildo y, posteriormente, se estableció
+                en su actual sede, inaugurada en 1958. Desde entonces, se ha
+                convertido en un espacio importante para conocer los
+                acontecimientos, las costumbres y las expresiones artísticas
+                que han formado la identidad de Guayaquil. A través de sus
+                exposiciones y actividades educativas, el museo permite que
+                estudiantes, investigadores y visitantes se acerquen al
+                pasado de la ciudad y comprendan la importancia de preservar
+                su patrimonio para las futuras generaciones.
+            </div>
+
+            <!-- Dos imágenes -->
+            <div class="historia-imagenes">
+
+                <img src="images/historia1.png"
+                     alt="Fotografía histórica del Museo Municipal">
+
+                <img src="images/historia2.png"
+                     alt="Fachada del Museo Municipal de Guayaquil">
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer id="footer">
+        <div class="inner">
+            <p>Museo Municipal de Guayaquil | Proyecto académico</p>
+        </div>
+    </footer>
+
+</div>
+
+<!-- Scripts de Phantom -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
 </html>

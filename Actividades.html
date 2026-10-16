@@ -1,12 +1,200 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Actividades</title>
 
-	</head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades | Museo Municipal de Guayaquil</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css">
+    </noscript>
+
+    <style>
+        .intro {
+            margin-bottom: 3em;
+        }
+
+        .actividades-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 2em;
+        }
+
+        .actividad {
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.04);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .actividad:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .actividad img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .actividad-contenido {
+            padding: 1.5em;
+        }
+
+        .actividad-contenido h3 {
+            margin-bottom: 0.5em;
+        }
+
+        .actividad-contenido p {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 736px) {
+            .actividades-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .actividad img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <!-- Encabezado y menú -->
+        <header id="header">
+            <div class="inner">
+                <a href="index.html" class="logo">
+                    <span class="symbol">
+                        <img src="images/logog.svg" alt="Logo del museo">
+                    </span>
+                    <span class="title">Museo Municipal</span>
+                </a>
+
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menú</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Menú desplegable -->
+        <nav id="menu">
+            <h2>Menú</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Actividades.html">Actividades</a></li>
+                <li><a href="Galeria.html">Galería</a></li>
+                <li><a href="Historia.html">Historia</a></li>
+                <li><a href="obras.html">Obras culturales</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <div id="main">
+            <div class="inner">
+
+                <header class="intro">
+                    <h1>Descubre nuestras actividades</h1>
+                    <p>
+                        Historia, arte y cultura se encuentran en el Museo
+                        Municipal de Guayaquil. Explora las actividades que
+                        te acercan al patrimonio de nuestra ciudad.
+                    </p>
+                </header>
+
+                <section class="actividades-grid">
+
+                    <article class="actividad">
+                        <img src="images/expo.jpeg"
+                             alt="Exposición cultural del museo">
+                        <div class="actividad-contenido">
+                            <h3>Exposiciones</h3>
+                            <p>
+                                Descubre colecciones de historia, arqueología,
+                                arte y cultura que cuentan la historia de Guayaquil.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="actividad">
+                        <img src="images/obras.jpeg"
+                             alt="Presentación de una obra teatral">
+                        <div class="actividad-contenido">
+                            <h3>Obras de teatro</h3>
+                            <p>
+                                Disfruta de presentaciones escénicas que
+                                acercan al público al mundo de las artes.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="actividad">
+                        <img src="images/talleres.jpeg"
+                             alt="Taller artístico y educativo">
+                        <div class="actividad-contenido">
+                            <h3>Talleres culturales</h3>
+                            <p>
+                                Participa en experiencias educativas y
+                                artísticas que estimulan la creatividad.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="actividad">
+                        <img src="images/conferencias.jpeg"
+                             alt="Conferencia cultural">
+                        <div class="actividad-contenido">
+                            <h3>Conferencias y charlas</h3>
+                            <p>
+                                Aprende sobre el patrimonio, el arte y los
+                                acontecimientos que marcaron la ciudad.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="actividad">
+                        <img src="images/visitas.jpeg"
+                             alt="Visitantes recorriendo un museo">
+                        <div class="actividad-contenido">
+                            <h3>Visitas educativas</h3>
+                            <p>
+                                Recorre los espacios del museo y conoce más
+                                sobre la memoria y la identidad guayaquileña.
+                            </p>
+                        </div>
+                    </article>
+
+                </section>
+            </div>
+        </div>
+
+        <!-- Pie de página -->
+        <footer id="footer">
+            <div class="inner">
+                <p>Museo Municipal de Guayaquil | Proyecto académico</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts de la plantilla Phantom -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
 </html>

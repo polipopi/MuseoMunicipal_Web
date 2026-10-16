@@ -1,12 +1,176 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Ubicación</title>
 
-	</head>
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Ubicación | Museo Municipal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css">
+    </noscript>
+
+    <style>
+        .ubicacion-info {
+            margin-bottom: 2em;
+            line-height: 1.8;
+        }
+
+        .ubicacion-mapa {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 12px;
+            margin-bottom: 2em;
+        }
+
+        .imagen-ruta {
+            margin-top: 2em;
+        }
+
+        .imagen-ruta img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .boton-mapa {
+            display: inline-block;
+            margin-top: 1em;
+            padding: 0.8em 1.4em;
+            border-radius: 8px;
+            background: #6654c7;
+            color: white !important;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .boton-mapa:hover {
+            background: #5140a8;
+        }
+
+        @media screen and (max-width: 736px) {
+            .ubicacion-mapa {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <!-- Encabezado -->
+    <header id="header">
+        <div class="inner">
+
+            <a href="index.html" class="logo">
+                <span class="symbol">
+                    <img src="images/logog.svg" alt="Logo del museo">
+                </span>
+                <span class="title">Museo Municipal</span>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menú</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Menú desplegable -->
+    <nav id="menu">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="obras.html">Obras culturales</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido de ubicación -->
+    <div id="main">
+        <div class="inner">
+
+            <h1>¿Cómo llegar?</h1>
+
+            <div class="ubicacion-info">
+                <p>
+                    Visita el Museo Municipal de Guayaquil y descubre
+                    la historia, el arte y el patrimonio cultural de nuestra
+                    ciudad. Estamos ubicados en el centro de Guayaquil,
+                    en la calle Sucre, entre Chile y Pedro Carbo.
+                </p>
+
+                <h2>Dirección</h2>
+                <p>
+                    <strong>Museo Municipal de Guayaquil</strong><br>
+                    Calle Sucre, entre Chile y Pedro Carbo.<br>
+                    Guayaquil, Ecuador.
+                </p>
+
+                <a class="boton-mapa"
+                   href="https://maps.app.goo.gl/EaJZJiCdaFqPSGG66"
+                   target="_blank"
+                   rel="noopener">
+                    Cómo llegar con Google Maps
+                </a>
+            </div>
+
+            <!-- Mapa -->
+            <h2>Encuéntranos en el mapa</h2>
+
+            <iframe
+                class="ubicacion-mapa"
+                src="https://maps.google.com/maps?q=Museo%20Municipal%20de%20Guayaquil&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa del Museo Municipal de Guayaquil">
+            </iframe>
+
+            <!-- Imagen referencial -->
+            <section class="imagen-ruta">
+                <h2>Referencia para llegar</h2>
+
+                <p>
+                    Aquí puedes colocar una fotografía de la fachada
+                    del museo o una imagen que muestre las calles cercanas
+                    para que los visitantes puedan reconocer el lugar.
+                </p>
+
+                <img src="images/ubi.jpeg"
+                     alt="Imagen referencial para llegar al Museo Municipal">
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer id="footer">
+        <div class="inner">
+            <p>Museo Municipal de Guayaquil | Proyecto académico</p>
+        </div>
+    </footer>
+
+</div>
+
+<!-- Scripts de Phantom -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
 </html>
