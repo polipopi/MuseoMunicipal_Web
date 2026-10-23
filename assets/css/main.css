@@ -226,6 +226,14 @@ input, select, textarea {
 	h6 {
 		font-size: 0.8em;
 	}
+	h1, h2, h3 {
+    	color: #2c3e50; /* Tono oscuro institucional */
+    	letter-spacing: 0.5px;
+	}
+
+	#main .inner {
+    	padding-top: 2.5em; /* Ajuste de espaciado superior */
+	}
 
 	@media screen and (max-width: 980px) {
 
