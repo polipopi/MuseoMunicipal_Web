@@ -114,69 +114,72 @@
                     </p>
                 </header>
 
-                <section class="actividades-grid">
+                <section class="actividades-lista" style="display: flex; flex-direction: column; gap: 3em; margin-top: 2em;">
 
-                    <article class="actividad">
-                        <img src="images/expo.jpeg"
-                             alt="Exposición cultural del museo">
-                        <div class="actividad-contenido">
-                            <h3>Exposiciones</h3>
-                            <p>
-                                Descubre colecciones de historia, arqueología,
-                                arte y cultura que cuentan la historia de Guayaquil.
-                            </p>
-                        </div>
-                    </article>
+    <!-- 1. Exposiciones -->
+    <article style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 280px;">
+            <img src="images/expo.jpeg" alt="Exposición cultural del museo" style="width: 100%; border-radius: 8px; object-fit: cover;" />
+        </div>
+        <div style="flex: 1.5; min-width: 280px;">
+            <h2>Exposiciones</h2>
+            <p>Explora las exposiciones del Museo Municipal de Guayaquil y descubre colecciones de historia, arqueología, arte y cultura que cuentan la evolución de la ciudad. A través de objetos históricos, piezas arqueológicas y expresiones artísticas, podrás conocer las tradiciones, el patrimonio y los acontecimientos que han marcado la identidad de Guayaquil a lo largo del tiempo.</p>
+        </div>
+    </article>
 
-                    <article class="actividad">
-                        <img src="images/obras.jpeg"
-                             alt="Presentación de una obra teatral">
-                        <div class="actividad-contenido">
-                            <h3>Obras de teatro</h3>
-                            <p>
-                                Disfruta de presentaciones escénicas que
-                                acercan al público al mundo de las artes.
-                            </p>
-                        </div>
-                    </article>
+    <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 0;" />
 
-                    <article class="actividad">
-                        <img src="images/talleres.jpeg"
-                             alt="Taller artístico y educativo">
-                        <div class="actividad-contenido">
-                            <h3>Talleres culturales</h3>
-                            <p>
-                                Participa en experiencias educativas y
-                                artísticas que estimulan la creatividad.
-                            </p>
-                        </div>
-                    </article>
+    <!-- 2. Obras de teatro (Imagen a la derecha) -->
+    <article style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; flex-direction: row-reverse;">
+        <div style="flex: 1; min-width: 280px;">
+            <img src="images/obras.jpeg" alt="Presentación de una obra teatral" style="width: 100%; border-radius: 8px; object-fit: cover;" />
+        </div>
+        <div style="flex: 1.5; min-width: 280px;">
+            <h2>Obras de teatro</h2>
+            <p>Disfruta de presentaciones escénicas que acercan al público al mundo de las artes y la cultura. A través de historias, personajes y actuaciones en vivo, las obras de teatro ofrecen momentos de entretenimiento, reflexión y creatividad para compartir en familia y disfrutar de diferentes expresiones artísticas.</p>
+        </div>
+    </article>
 
-                    <article class="actividad">
-                        <img src="images/conferencias.jpeg"
-                             alt="Conferencia cultural">
-                        <div class="actividad-contenido">
-                            <h3>Conferencias y charlas</h3>
-                            <p>
-                                Aprende sobre el patrimonio, el arte y los
-                                acontecimientos que marcaron la ciudad.
-                            </p>
-                        </div>
-                    </article>
+    <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 0;" />
 
-                    <article class="actividad">
-                        <img src="images/visitas.jpeg"
-                             alt="Visitantes recorriendo un museo">
-                        <div class="actividad-contenido">
-                            <h3>Visitas educativas</h3>
-                            <p>
-                                Recorre los espacios del museo y conoce más
-                                sobre la memoria y la identidad guayaquileña.
-                            </p>
-                        </div>
-                    </article>
+    <!-- 3. Talleres culturales -->
+    <article style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 280px;">
+            <img src="images/talleres.jpeg" alt="Taller artístico y educativo" style="width: 100%; border-radius: 8px; object-fit: cover;" />
+        </div>
+        <div style="flex: 1.5; min-width: 280px;">
+            <h2>Talleres culturales</h2>
+            <p>PParticipa en talleres culturales que combinan el aprendizaje, el arte y la creatividad en un espacio dinámico y participativo. A través de actividades prácticas, podrás explorar diferentes expresiones artísticas, desarrollar nuevas habilidades y compartir experiencias que fomentan el interés por la cultura y las tradiciones de Guayaquil.</p>
+        </div>
+    </article>
 
-                </section>
+    <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 0;" />
+
+    <!-- 4. Conferencias y charlas (Imagen a la derecha) -->
+    <article style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; flex-direction: row-reverse;">
+        <div style="flex: 1; min-width: 280px;">
+            <img src="images/conferencias.jpeg" alt="Conferencia cultural" style="width: 100%; border-radius: 8px; object-fit: cover;" />
+        </div>
+        <div style="flex: 1.5; min-width: 280px;">
+            <h2>Conferencias y charlas</h2>
+            <p>Participa en conferencias y charlas que te permitirán conocer más sobre la historia, el patrimonio y las expresiones artísticas de Guayaquil. A través de encuentros con especialistas y espacios de diálogo, podrás descubrir nuevos conocimientos, comprender acontecimientos importantes de la ciudad y reflexionar sobre su identidad cultural.</p>
+        </div>
+    </article>
+
+    <hr style="border: 0; border-top: 1px solid #e0e0e0; margin: 0;" />
+
+    <!-- 5. Visitas educativas -->
+    <article style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 280px;">
+            <img src="images/visitas.jpeg" alt="Visitantes recorriendo un museo" style="width: 100%; border-radius: 8px; object-fit: cover;" />
+        </div>
+        <div style="flex: 1.5; min-width: 280px;">
+            <h2>Visitas educativas</h2>
+            <p>Explora los espacios del Museo Municipal de Guayaquil a través de visitas educativas que te acercan a la historia, el patrimonio y la identidad de la ciudad. Durante el recorrido, podrás descubrir objetos históricos, colecciones y relatos que ayudan a comprender cómo ha evolucionado Guayaquil y la importancia de preservar su memoria cultural para las futuras generaciones.</p>
+        </div>
+    </article>
+
+</section>
             </div>
         </div>
 
